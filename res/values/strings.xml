@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">ProtoMap</string>
+    <string name="organization">ProtoMap - Organization</string>
+    <string name="menu_settings">Settings</string>
+
+</resources>
