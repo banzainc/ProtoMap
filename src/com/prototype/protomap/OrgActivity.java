@@ -1,17 +1,10 @@
 package com.prototype.protomap;
 
-import ru.yandex.yandexmapkit.MapController;
-import ru.yandex.yandexmapkit.MapView;
-import ru.yandex.yandexmapkit.OverlayManager;
-import ru.yandex.yandexmapkit.overlay.Overlay;
-import ru.yandex.yandexmapkit.overlay.OverlayItem;
-import ru.yandex.yandexmapkit.utils.GeoPoint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,19 +22,7 @@ public class OrgActivity extends Activity implements OnTouchListener{
     	super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_org_card);
-        
         setTitle(R.string.organization);
-
-        MapView mapView = (MapView) findViewById(R.id.minimap);
-        MapController mMapController = mapView.getMapController();
-        OverlayManager mOverlayManager = mMapController.getOverlayManager();
-        mOverlayManager.getMyLocation().setEnabled(false);
-        mMapController.setPositionNoAnimationTo(new GeoPoint(55.733828,37.59386));
-        
-        Overlay overlay = new Overlay(mMapController);
-        OverlayItem CarStation = new OverlayItem(new GeoPoint(55.733828,37.59386), BitmapFactory.decodeResource(getResources() , R.drawable.point));
-        overlay.addOverlayItem(CarStation);
-        mOverlayManager.addOverlay(overlay);
        
         findViewById(R.id.tableRow1).setOnTouchListener(this);
         findViewById(R.id.tableRow2).setOnTouchListener(this);

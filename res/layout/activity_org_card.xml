@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView	  xmlns:android="http://schemas.android.com/apk/res/android"	
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    
+	<LinearLayout
 		android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
     	android:orientation="vertical">
     	
-	<ru.yandex.yandexmapkit.MapView
-        android:id="@+id/minimap"
-        android:layout_width="fill_parent"
-        android:layout_height="150dp"
-        android:apiKey="Ngftm01pQEyxFBZ-eXM084GPMyLGu6oS4epsMHcwheKIZf1EuVIc1iNUR2M-LVHWJebFVHqpC8ZEdTGAAozXITKo33Vn6S20wtixlbE1MiQ="
-    />
+	<ImageView 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+        android:src="@drawable/fish"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
     <View 
        	android:background="#6b6d6b" 
        	android:layout_height="0.5dp" 
@@ -122,15 +125,6 @@
        	android:background="#6b6d6b" 
        	android:layout_height="0.5dp" 
        	android:layout_width="fill_parent"/>  
-
-<ScrollView		
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
-	
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
     
     <LinearLayout
         android:layout_width="wrap_content"
@@ -324,8 +318,6 @@
             android:textSize="11dp"
             android:textStyle="bold"
             android:text="Записаться на ТО" />   
-		
-	</LinearLayout>
-	</ScrollView>
 	
-</LinearLayout>
+	</LinearLayout>
+</ScrollView>
