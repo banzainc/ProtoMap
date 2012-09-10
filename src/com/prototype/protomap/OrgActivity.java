@@ -63,7 +63,7 @@ public class OrgActivity extends Activity implements OnTouchListener{
         DatePickerDialog tpd = new DatePickerDialog(this, myCallBack, 2012, 9, 1);
         tpd.setCancelable(false);
         
-        tpd.setButton(DialogInterface.BUTTON_NEGATIVE, "отменить", new DialogInterface.OnClickListener() {
+        tpd.setButton(DialogInterface.BUTTON_NEGATIVE, "Отменить", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                    findViewById(R.id.btnOrder).setBackgroundDrawable(getResources().getDrawable(R.drawable.layout_button_background)); 
             }

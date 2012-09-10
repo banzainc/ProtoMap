@@ -40,7 +40,7 @@
             android:layout_width="20dp"
        		android:layout_height="20dp" />
         <TextView
-        	android:id="@+id/textView15"
+        	android:id="@+id/textViewRoad"
         	android:layout_width="wrap_content"
        		android:layout_height="wrap_content"
         	android:textStyle="bold"
@@ -51,6 +51,7 @@
         	android:layout_marginRight="5dp"
         	android:text="Маршрут" />
 	</LinearLayout>
+	
 	<View 
        	android:background="#7b7b7b" 
        	android:layout_height="fill_parent" 
@@ -74,7 +75,7 @@
             android:layout_width="30dp"
        		android:layout_height="30dp" />
         <TextView
-        	android:id="@+id/textView14"
+        	android:id="@+id/textViewSave"
         	android:layout_width="wrap_content"
        		android:layout_height="wrap_content"
         	android:textStyle="bold"
@@ -85,20 +86,24 @@
         	android:layout_marginRight="5dp"
         	android:text="Сохранить" />
 	</LinearLayout>
+	
 	<View 
        	android:background="#7b7b7b" 
        	android:layout_height="fill_parent" 
        	android:layout_width="0.5dp"/>   
+       	
 	<LinearLayout
         android:background="@drawable/layout_button_background"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:orientation="horizontal" >
+        
         <View 
        		android:background="#FFFFFF" 
        		android:layout_height="fill_parent" 
        		android:layout_width="0.5dp"/>  
+       		
         <ImageView android:src="@drawable/mail"
             android:contentDescription="mail.png"
         	android:layout_marginTop="10dp"
@@ -108,7 +113,7 @@
             android:layout_width="20dp"
        		android:layout_height="20dp" />
         <TextView
-        	android:id="@+id/textView13"
+        	android:id="@+id/textViewLink"
         	android:layout_width="wrap_content"
        		android:layout_height="wrap_content"
         	android:textStyle="bold"
@@ -138,7 +143,7 @@
         	android:textStyle="bold"
         	android:layout_marginTop="5dp"
         	android:layout_marginLeft="5dp"
-        	android:text="Автосалон GS-Trade" />
+        	android:text="Автосалон Эксклюзив" />
 
             <RatingBar
     	    android:id="@+id/ratingBar1"
@@ -147,9 +152,10 @@
     	    android:layout_weight="2"
     	    android:indeterminate="false"
     	    android:numStars="5"
+    	    android:rating="4"
     	    android:layout_marginTop="8dp"
     	    android:layout_marginLeft="10dp"
-    	    style="?android:attr/ratingBarStyleSmall"
+    	    style="@style/CustomRatingBar"
     	    android:stepSize="0.5" />
         
     </LinearLayout>
@@ -159,7 +165,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="Автосалон Kia, Hyundai, Honda, Ford, Volkswagen, Toyota и др. Автокредит!" />
+        android:text="Автосервис Kia, Hyundai, Honda, Ford, Volkswagen, Toyota и др." />
 
     <View 
        	android:background="#adaaad" 
@@ -189,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:width="0dp"
-                android:text="Москва, Комсомольский просп., вл. 1" />
+                android:text="Санкт-Петербург, просп. Шаумяна, 4" />
 
         </TableRow>
         
@@ -243,7 +249,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="+7 (495) 225-35-45" />
+                android:text="+7 (812) 334-11-04" />
 
         </TableRow>
 
@@ -270,7 +276,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="http://www.gs-trade.ru/" />
+                android:text="http://www.tyres.spb.ru/" />
 
         </TableRow>
         
@@ -304,7 +310,117 @@
         <View 
        		android:background="#FFadaaad" 
        		android:layout_height="0.5dp" 
-       		android:layout_width="fill_parent"/>        
+       		android:layout_width="fill_parent"/>
+        
+       	<TableRow
+        	android:id="@+id/tableRow6"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:text="Отзывы" />
+        	
+        </TableRow>              
+            
+       	<TableRow
+        	android:id="@+id/tableRow7"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" >
+
+       	    <LinearLayout
+       	        android:orientation="vertical"
+       	        android:layout_marginTop="10dp"
+       	        android:layout_marginBottom="10dp"
+       	        android:layout_marginRight="5dp"
+       	        android:layout_width="wrap_content"
+       	        android:layout_height="wrap_content"> 
+       	        
+       	    	<RatingBar
+    	    		android:id="@+id/ratingBar1"
+    	    		android:layout_width="wrap_content"
+    	    		android:layout_height="wrap_content"
+    	    		android:indeterminate="false"
+    	    		android:isIndicator="true"
+    	    		android:numStars="5"
+    	    		android:rating="5"
+    	    		android:layout_gravity="right"
+    	    		style="@style/CustomRatingBar"
+    	    		android:stepSize="0.5" />
+       	    
+       	    	<TextView
+                	android:id="@+id/textView14"
+                	android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+    	    		android:layout_gravity="right"  
+    	    		android:textSize="11dp"              	
+                	android:textStyle="bold"
+                	android:text="Алексей" />
+       	    
+       	    </LinearLayout>
+       	    
+       	    <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:width="0dp"
+                android:layout_margin="5dp"
+                android:text="Отличный сервис, реккомендую!" />
+       	    	    
+        </TableRow>
+        
+       	<TableRow
+        	android:id="@+id/tableRow8"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" >
+
+       	    <LinearLayout
+       	        android:orientation="vertical"
+       	        android:layout_marginTop="10dp"
+       	        android:layout_marginBottom="10dp"
+       	        android:layout_marginRight="5dp"
+       	        android:layout_width="wrap_content"
+       	        android:layout_height="wrap_content"> 
+       	        
+       	    	<RatingBar
+    	    		android:id="@+id/ratingBar2"
+    	    		android:layout_width="wrap_content"
+    	    		android:layout_height="wrap_content"
+    	    		android:indeterminate="false"
+    	    		android:isIndicator="true"
+    	    		android:numStars="5"
+    	    		android:rating="3"
+    	    		android:layout_gravity="right"
+    	    		style="@style/CustomRatingBar"
+    	    		android:stepSize="0.5" />
+       	    
+       	    	<TextView
+                	android:id="@+id/textView16"
+                	android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+    	    		android:layout_gravity="right"  
+    	    		android:textSize="11dp"              	
+                	android:textStyle="bold"
+                	android:text="Кирилл" />
+       	    
+       	    </LinearLayout>
+       	    
+       	    <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:width="0dp"
+                android:layout_margin="5dp"
+                android:text="Да, сервис хорош." />
+       	    	    
+        </TableRow>
+       	    
+        <View 
+       		android:background="#FFadaaad" 
+       		android:layout_height="0.5dp" 
+       		android:layout_width="fill_parent"/>                
     	
     </TableLayout>
     

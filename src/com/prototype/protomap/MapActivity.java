@@ -28,14 +28,15 @@ public class MapActivity extends Activity implements OnBallonListener{
         MapView mapView = (MapView) findViewById(R.id.map);
         mMapController = mapView.getMapController();
         mMapController.setJamsVisible(true);
+        mMapController.setPositionNoAnimationTo(new GeoPoint(59.917484,30.357646));
         mOverlayManager = mMapController.getOverlayManager();
         mOverlayManager.getMyLocation().setEnabled(false);
         
         Overlay overlay = new Overlay(mMapController);
 
-        OverlayItem CarStation = new OverlayItem(new GeoPoint(55.733828,37.59386), BitmapFactory.decodeResource(getResources() , R.drawable.point));
+        OverlayItem CarStation = new OverlayItem(new GeoPoint(59.917484,30.357646), BitmapFactory.decodeResource(getResources() , R.drawable.point));
         BalloonItem balloonCarStation = new BalloonItem(CarStation.getGeoPoint(), BitmapFactory.decodeResource(getResources() , R.drawable.carstation));
-        balloonCarStation.setText("<b>Автосалон GS-Trade</b>");
+        balloonCarStation.setText("<b>Автосалон Эксклюзив</b>");
 
         balloonCarStation.setOnBallonListener(this);
         
