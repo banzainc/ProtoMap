@@ -26,6 +26,7 @@ public class MapActivity extends Activity implements OnBallonListener{
         setTitle(R.string.app_name);
         
         MapView mapView = (MapView) findViewById(R.id.map);
+        mapView.showBuiltInScreenButtons(true);
         mMapController = mapView.getMapController();
         mMapController.setJamsVisible(true);
         mMapController.setPositionNoAnimationTo(new GeoPoint(59.917484,30.357646));
