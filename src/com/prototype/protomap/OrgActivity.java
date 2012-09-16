@@ -56,7 +56,7 @@ public class OrgActivity extends Activity implements OnTouchListener{
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                 int dayOfMonth) {
             	Toast.makeText(OrgActivity.this, "Вы записаны, приезжайте!", Toast.LENGTH_LONG).show();
-                findViewById(R.id.btnOrder).setBackgroundDrawable(getResources().getDrawable(R.drawable.layout_button_background));
+                findViewById(R.id.btnOrder).setBackgroundDrawable(getResources().getDrawable(R.drawable.layout_button_order_background));
                  }
             };
             
@@ -65,7 +65,7 @@ public class OrgActivity extends Activity implements OnTouchListener{
         
         tpd.setButton(DialogInterface.BUTTON_NEGATIVE, "Отменить", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                   findViewById(R.id.btnOrder).setBackgroundDrawable(getResources().getDrawable(R.drawable.layout_button_background)); 
+                   findViewById(R.id.btnOrder).setBackgroundDrawable(getResources().getDrawable(R.drawable.layout_button_order_background)); 
             }
           });
     	tpd.show();
